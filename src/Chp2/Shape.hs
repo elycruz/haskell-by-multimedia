@@ -22,7 +22,7 @@ circle :: Radius -> Shape
 circle r = Ellipse r r
 
 distBetween :: Vertex -> Vertex -> Float
-distBetween (x1, y1) (x2, y2) = sqrt((x1 - x2) ^2 + (y1 - y2) ^2)
+distBetween (x1, y1) (x2, y2) = sqrt((x1 - x2)^2 + (y1 - y2)^2)
 
 triArea :: Vertex -> Vertex -> Vertex -> Float
 triArea v1 v2 v3 =
@@ -42,7 +42,6 @@ area (Polygon (v1:vs)) =
         polyArea :: [Vertex] -> Float
         polyArea (v2:v3:vs') = (triArea v1 v2 v3) + polyArea (v3:vs')
         polyArea _ = 0
-
 
 -- area (Polygon (v1:v2:v3:vs)) =
 --     (triArea v1 v2 v3) + area(Polygon(v1:v3:vs))
