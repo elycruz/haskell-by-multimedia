@@ -2,7 +2,7 @@ name:                haskell-by-multimedia
 version:             0.1.0.0
 github:              "githubuser/haskell-by-multimedia"
 license:             BSD3
-author:              "Author name here"
+author:              "Ely De La Cruz"
 maintainer:          "example@example.com"
 copyright:           "2018 Author name here"
 
@@ -23,9 +23,15 @@ dependencies:
 - base >= 4.7 && < 5
 - hspec
 - QuickCheck
+- GLFW >= 0.5.2.5
+- OpenGL
+- old-time
+- stm
 
 library:
-  source-dirs: src
+  source-dirs:
+  - src
+  - src/SOE/src
 
 executables:
   haskell-by-multimedia-exe:

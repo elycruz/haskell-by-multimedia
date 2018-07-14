@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a599a682961af6c32eadbdb437da9b29840a62d503c269ed35ea06df175249d3
+-- hash: ad6a5701d55a0bf72a453f33b61b321edbf6c7147bdb426e5c5b1589600243bc
 
 name:           haskell-by-multimedia
 version:        0.1.0.0
@@ -28,12 +28,17 @@ library
   exposed-modules:
       Chp2.Shape
       Lib
+      Concurrent
+      SOE
   other-modules:
       Paths_haskell_by_multimedia
   hs-source-dirs:
       src
+      src/SOE/src
   build-depends:
-      QuickCheck
+      GLFW >=0.5.2.5
+    , OpenGL
+    , QuickCheck
     , base >=4.7 && <5
     , hspec
   default-language: Haskell2010
@@ -46,7 +51,9 @@ executable haskell-by-multimedia-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      QuickCheck
+      GLFW >=0.5.2.5
+    , OpenGL
+    , QuickCheck
     , base >=4.7 && <5
     , haskell-by-multimedia
     , hspec
@@ -63,7 +70,9 @@ test-suite haskell-by-multimedia-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      QuickCheck
+      GLFW >=0.5.2.5
+    , OpenGL
+    , QuickCheck
     , base >=4.7 && <5
     , haskell-by-multimedia
     , hspec
